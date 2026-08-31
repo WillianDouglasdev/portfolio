@@ -1,10 +1,7 @@
 import opsMindDashboard from "../assets/images/projects/opsmind-dashboard.png";
 import espantaDividaDashboard from "../assets/images/projects/espanta-divida-dashboard.png";
 
-// ========================================
-// DADOS DOS PROJETOS
-// Para adicionar outro projeto, inclua um objeto no array correspondente.
-// ========================================
+// Para publicar outro projeto, adicione os dados e a imagem no array correspondente.
 export const featuredProjects = [
   {
     id: "opsmind",
@@ -18,6 +15,7 @@ export const featuredProjects = [
     differential:
       "Os cálculos, alertas e recomendações são produzidos por regras determinísticas no backend. A Inteligência Artificial atua somente como camada explicativa sobre evidências previamente calculadas.",
     highlight: "IA para explicar. Regras de negócio para decidir.",
+    primaryTechnologies: ["Python", "Django", "React", "PostgreSQL", "IA"],
     technologies: [
       "Python",
       "Django",
@@ -28,6 +26,8 @@ export const featuredProjects = [
       "Chart.js",
       "pytest",
     ],
+    quality:
+      "API organizada com Django REST Framework e testes automatizados com pytest para validar regras e comportamentos centrais.",
     links: {
       demo: "https://opsmind-peach.vercel.app/",
       github: "https://github.com/WillianDouglasdev/opsmind",
@@ -50,6 +50,7 @@ export const featuredProjects = [
     differential:
       "As métricas, classificações, alertas e projeções são calculados por regras de negócio no backend. A IA é opcional e apenas transforma resultados já calculados em explicações mais acessíveis.",
     highlight: "Os dados calculam a situação. A explicação ajuda a compreendê-la.",
+    primaryTechnologies: ["Python", "FastAPI", "PostgreSQL", "Supabase", "JavaScript"],
     technologies: [
       "Python",
       "FastAPI",
@@ -61,6 +62,8 @@ export const featuredProjects = [
       "Chart.js",
       "pytest",
     ],
+    quality:
+      "Validação de dados com Pydantic, persistência em PostgreSQL e testes automatizados com pytest para proteger os cálculos financeiros.",
     links: {
       demo: "https://espanta-divida.vercel.app/app",
       github: "https://github.com/WillianDouglasdev/espanta-divida",

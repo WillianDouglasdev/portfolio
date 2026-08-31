@@ -8,9 +8,7 @@ import "./styles/components.css";
 import "./styles/sections.css";
 import App from "./App";
 
-// ========================================
-// PONTO DE ENTRADA DA APLICAÇÃO
-// ========================================
+// Os estilos ficam centralizados aqui para manter a ordem da cascata previsível.
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />

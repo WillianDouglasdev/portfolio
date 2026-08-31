@@ -11,8 +11,8 @@
     />
     <meta name="author" content="Willian Douglas" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0d0e13" />
-    <link rel="canonical" href="https://williands2003.github.io/Portifolio/" />
+    <meta name="theme-color" content="#0c0d13" />
+    <!-- Adicione canonical e og:url aqui quando o domínio definitivo estiver publicado. -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,10 +29,9 @@
       property="og:description"
       content="Desenvolvedor em formação com visão de dados. Conheça projetos que conectam desenvolvimento, dados, automação e IA aplicada."
     />
-    <meta property="og:url" content="https://williands2003.github.io/Portifolio/" />
     <meta
       property="og:image"
-      content="https://williands2003.github.io/Portifolio/og-cover.png"
+      content="https://raw.githubusercontent.com/WillianDouglasdev/portfolio/main/public/og-cover.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -46,7 +45,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://williands2003.github.io/Portifolio/og-cover.png"
+      content="https://raw.githubusercontent.com/WillianDouglasdev/portfolio/main/public/og-cover.png"
     />
 
     <link
@@ -57,26 +56,8 @@
     />
     <link rel="shortcut icon" href="%BASE_URL%favicon.png?v=wd-2026" />
 
-    <!-- Evita que o tema incorreto apareça durante o carregamento inicial. -->
-    <script>
-      (() => {
-        let savedTheme = null;
-
-        try {
-          savedTheme = localStorage.getItem("willian-portfolio-theme");
-        } catch {
-          // O tema do sistema continua disponível quando o armazenamento é bloqueado.
-        }
-
-        const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches
-          ? "light"
-          : "dark";
-        const initialTheme = savedTheme || systemTheme;
-        document.documentElement.dataset.theme = initialTheme;
-        document.querySelector('meta[name="theme-color"]').content =
-          initialTheme === "dark" ? "#0d0e13" : "#f8f7fc";
-      })();
-    </script>
+    <!-- Executado antes do React para evitar a troca visível de tema no carregamento. -->
+    <script src="%BASE_URL%theme-init.js"></script>
   </head>
   <body>
     <div id="root"></div>

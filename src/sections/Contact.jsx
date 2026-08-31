@@ -9,18 +9,12 @@ function Contact() {
           <p className="eyebrow">Contato</p>
           <h2 id="contact-title">Vamos conversar?</h2>
           <p>
-            Estou aberto a estágios e oportunidades iniciais em desenvolvimento, dados e áreas que conectem essas frentes. Você pode falar comigo diretamente ou conhecer melhor meu trabalho pelo LinkedIn e pelo GitHub.
+            Estou aberto a oportunidades iniciais em desenvolvimento, dados e áreas que conectem essas frentes.
           </p>
         </div>
 
         <div className="contact-actions">
-          {profile.links.email && (
-            <a className="button button--primary" href={profile.links.email}>
-              <i className="bi bi-envelope" aria-hidden="true" />
-              Enviar e-mail
-            </a>
-          )}
-          <SocialLinks />
+          <SocialLinks showEmail />
           {profile.links.resume && (
             <a className="button button--secondary" href={profile.links.resume} download>
               Baixar currículo

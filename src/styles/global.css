@@ -101,6 +101,17 @@ li {
   scroll-margin-top: var(--header-height);
 }
 
+.section-shell.reveal-section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 480ms ease, transform 480ms ease;
+}
+
+.section-shell.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;
@@ -120,7 +131,7 @@ li {
 
 .eyebrow {
   margin-bottom: 0.75rem;
-  color: var(--color-accent);
+  color: var(--color-accent-light);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -164,5 +175,10 @@ li {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .section-shell.reveal-section {
+    opacity: 1;
+    transform: none;
   }
 }

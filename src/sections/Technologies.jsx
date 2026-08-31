@@ -10,7 +10,7 @@ function Technologies() {
           id="technologies-title"
           eyebrow="Tecnologias e competências"
           title="Ferramentas dentro de contexto"
-          description="Minha base atual está em desenvolvimento web com Python e JavaScript, apoiada por APIs, bancos de dados e ferramentas de análise. O destaque acompanha o uso nos meus projetos e experiências."
+          description="Desenvolvimento é o eixo da minha base; dados ampliam a leitura dos problemas e automação apoia soluções mais eficientes. Os destaques refletem as competências mais presentes nos meus projetos."
         />
         <div className="technology-grid">
           {technologyGroups.map((group) => (

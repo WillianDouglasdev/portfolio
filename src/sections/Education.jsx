@@ -1,27 +1,36 @@
+import { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import { education } from "../data/education";
 
 function Education() {
+  const [showCurrentStudies, setShowCurrentStudies] = useState(false);
+
   return (
-    <section className="education section-shell" id="formacao" aria-labelledby="education-title">
+    <section
+      className="education section-shell"
+      id="formacao"
+      aria-labelledby="education-title"
+    >
       <div className="container-xl">
         <SectionTitle
           id="education-title"
           eyebrow="Formação"
           title="Software, dados e Inteligência Artificial"
-          description="Minha formação combina fundamentos de desenvolvimento de software com estudos específicos em Inteligência Artificial e desenvolvimento web."
+          description="Formação acadêmica e prática alinhada aos projetos que desenvolvo."
         />
 
-        <div className="degree-grid">
+        <div className="degree-list">
           {education.degrees.map((degree) => (
             <article className="degree-item" key={degree.course}>
+              <div>
+                <p className="education-type">Graduação</p>
+                <h3>{degree.course}</h3>
+                <p>{degree.institution}</p>
+              </div>
               <div className="education-meta">
                 <span>{degree.period}</span>
                 <span className="status-badge">{degree.status}</span>
               </div>
-              <p className="education-type">Graduação</p>
-              <h3>{degree.course}</h3>
-              <p>{degree.institution}</p>
             </article>
           ))}
         </div>
@@ -32,23 +41,43 @@ function Education() {
               <div>
                 <p className="education-type">{training.type}</p>
                 <h3>{training.course}</h3>
-                <p className="training-institution">{training.institution} · {training.period}</p>
               </div>
-              <p>{training.description}</p>
+              <p className="training-institution">
+                {training.institution} · {training.period}
+              </p>
             </article>
           ))}
         </div>
 
-        <div className="continuous-learning">
-          <h3>Estudos complementares atuais</h3>
-          <div>
-            {education.continuousLearning.map((study) => (
-              <article key={study.institution}>
-                <h4>{study.institution}</h4>
-                <p>{study.focus}</p>
-              </article>
-            ))}
-          </div>
+        <div className="current-studies">
+          <p>
+            <strong>Estudos atuais:</strong>{" "}
+            {education.continuousLearning.map((study) => study.institution).join(" · ")}
+          </p>
+          <button
+            className="disclosure-button"
+            type="button"
+            aria-expanded={showCurrentStudies}
+            aria-controls="current-studies-details"
+            onClick={() => setShowCurrentStudies((current) => !current)}
+          >
+            {showCurrentStudies ? "Ocultar detalhes" : "Ver detalhes dos estudos"}
+            <i
+              className={`bi ${showCurrentStudies ? "bi-chevron-up" : "bi-chevron-down"}`}
+              aria-hidden="true"
+            />
+          </button>
+
+          {showCurrentStudies && (
+            <ul className="current-studies-details" id="current-studies-details">
+              {education.continuousLearning.map((study) => (
+                <li key={study.institution}>
+                  <strong>{study.institution}</strong>
+                  <span>{study.focus}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </section>

@@ -2,19 +2,21 @@ import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logoWd from "../assets/images/logo-wd.png";
 
+// Mantenha esta lista alinhada à sequência das seções em App.jsx.
 const navItems = [
   { label: "Início", href: "#inicio", id: "inicio" },
-  { label: "Projetos", href: "#projetos", id: "projetos" },
-  { label: "Tecnologias", href: "#tecnologias", id: "tecnologias" },
   { label: "Sobre", href: "#sobre", id: "sobre" },
-  { label: "Experiência", href: "#experiencia", id: "experiencia" },
   { label: "Formação", href: "#formacao", id: "formacao" },
+  { label: "Foco", href: "#foco", id: "foco" },
+  { label: "Tecnologias", href: "#tecnologias", id: "tecnologias" },
+  { label: "Projetos", href: "#projetos", id: "projetos" },
+  { label: "Recomendações", href: "#recomendacoes", id: "recomendacoes" },
   { label: "Contato", href: "#contato", id: "contato" },
 ];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("inicio");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const sections = navItems

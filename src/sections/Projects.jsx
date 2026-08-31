@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FeaturedProject from "../components/FeaturedProject";
 import ProjectCard from "../components/ProjectCard";
 import SectionTitle from "../components/SectionTitle";
@@ -8,6 +9,12 @@ import {
 } from "../data/projects";
 
 function Projects() {
+  const [expandedProject, setExpandedProject] = useState(null);
+
+  function toggleProject(projectId) {
+    setExpandedProject((current) => (current === projectId ? null : projectId));
+  }
+
   return (
     <section className="projects section-shell" id="projetos" aria-labelledby="projects-title">
       <div className="container-xl">
@@ -20,7 +27,13 @@ function Projects() {
 
         <div className="featured-projects">
           {featuredProjects.map((project, index) => (
-            <FeaturedProject key={project.id} project={project} index={index} />
+            <FeaturedProject
+              key={project.id}
+              project={project}
+              index={index}
+              isExpanded={expandedProject === project.id}
+              onToggle={() => toggleProject(project.id)}
+            />
           ))}
         </div>
 

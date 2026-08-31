@@ -26,13 +26,10 @@ function About() {
 
           <div className="about-copy">
             <p>
-              Curso duas graduações: Análise e Desenvolvimento de Sistemas no Centro Universitário Newton Paiva e Inteligência Artificial no Centro Universitário UNA. Também concluí a formação profissionalizante em Desenvolvimento Web Full Stack na Infinity School, que estruturou minha base prática em desenvolvimento web.
+              Curso Análise e Desenvolvimento de Sistemas na Newton Paiva e Inteligência Artificial na UNA. Minha formação Full Stack na Infinity School estruturou a base prática que aplico em desenvolvimento web.
             </p>
             <p>
-              Minha experiência conecta desenvolvimento e dados. Já trabalhei com indicadores, informações de alunos e vendas, Power BI, Excel, automação de processos, desenvolvimento web e apoio a plataformas internas.
-            </p>
-            <p>
-              Nos meus projetos, procuro transformar problemas em sistemas funcionais, combinando interfaces, APIs, regras de negócio, bancos de dados e, quando faz sentido, Inteligência Artificial aplicada de forma controlada.
+              Minha experiência conecta desenvolvimento e dados. Procuro transformar problemas em sistemas funcionais com interfaces, APIs, regras de negócio, bancos de dados e Inteligência Artificial aplicada de forma controlada.
             </p>
 
             <ul className="language-list" aria-label="Idiomas">
