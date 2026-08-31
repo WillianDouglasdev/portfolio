@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Willian Douglas | Desenvolvimento, Dados e IA</title>
+    <meta
+      name="description"
+      content="Portfólio de Willian Douglas, desenvolvedor em formação com visão de dados. Projetos em desenvolvimento web, automação, dados e IA aplicada."
+    />
+    <meta name="author" content="Willian Douglas" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d0e13" />
+    <link rel="canonical" href="https://williands2003.github.io/Portifolio/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=League+Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preview utilizado ao compartilhar o portfólio em redes sociais. -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Willian Douglas | Desenvolvimento, Dados e IA" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor em formação com visão de dados. Conheça projetos que conectam desenvolvimento, dados, automação e IA aplicada."
+    />
+    <meta property="og:url" content="https://williands2003.github.io/Portifolio/" />
+    <meta
+      property="og:image"
+      content="https://williands2003.github.io/Portifolio/og-cover.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Willian Douglas — Desenvolvimento, Dados e IA" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Willian Douglas | Desenvolvimento, Dados e IA" />
+    <meta
+      name="twitter:description"
+      content="Desenvolvedor em formação com visão de dados. Projetos em desenvolvimento, dados, automação e IA aplicada."
+    />
+    <meta
+      name="twitter:image"
+      content="https://williands2003.github.io/Portifolio/og-cover.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="%BASE_URL%favicon.png?v=wd-2026"
+    />
+    <link rel="shortcut icon" href="%BASE_URL%favicon.png?v=wd-2026" />
+
+    <!-- Evita que o tema incorreto apareça durante o carregamento inicial. -->
+    <script>
+      (() => {
+        let savedTheme = null;
+
+        try {
+          savedTheme = localStorage.getItem("willian-portfolio-theme");
+        } catch {
+          // O tema do sistema continua disponível quando o armazenamento é bloqueado.
+        }
+
+        const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
+        const initialTheme = savedTheme || systemTheme;
+        document.documentElement.dataset.theme = initialTheme;
+        document.querySelector('meta[name="theme-color"]').content =
+          initialTheme === "dark" ? "#0d0e13" : "#f8f7fc";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

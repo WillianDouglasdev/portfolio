@@ -1,0 +1,49 @@
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #0d0e13;
+  --color-surface: #15171f;
+  --color-surface-alt: #1c1f2a;
+  --color-text: #f5f3ff;
+  --color-text-muted: #b2adbd;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-accent-soft: rgba(124, 58, 237, 0.14);
+  --color-border: #2b2e3a;
+  --color-focus: #c4b5fd;
+  --color-header: rgba(13, 14, 19, 0.94);
+  --shadow-project: 0 24px 70px rgba(0, 0, 0, 0.32);
+
+  --font-display: "League Spartan", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --font-size-hero: clamp(3.5rem, 9vw, 7rem);
+  --font-size-section: clamp(2.4rem, 5vw, 4.25rem);
+  --font-size-project: clamp(2.2rem, 4vw, 3.4rem);
+  --font-size-body: clamp(1rem, 1.2vw, 1.125rem);
+
+  --content-width: 1200px;
+  --header-height: 4.75rem;
+  --section-space: clamp(3.25rem, 5.5vw, 4.75rem);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-bg: #f8f7fc;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f0eef6;
+  --color-text: #18161e;
+  --color-text-muted: #5f5b66;
+  --color-accent: #6d28d9;
+  --color-accent-hover: #5b21b6;
+  --color-accent-soft: rgba(109, 40, 217, 0.1);
+  --color-border: #dedbe7;
+  --color-focus: #6d28d9;
+  --color-header: rgba(248, 247, 252, 0.94);
+  --shadow-project: 0 24px 70px rgba(42, 31, 68, 0.12);
+}
