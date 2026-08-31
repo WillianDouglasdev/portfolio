@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// URL base necessária para os assets funcionarem no GitHub Pages.
+// A Vercel publica a aplicação na raiz do domínio.
 export default defineConfig({
   plugins: [react()],
-  base: "/Portifolio/",
+  base: "/",
 });
