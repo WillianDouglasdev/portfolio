@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="none">
+  <!-- Primeiro quadro do SVG fornecido, sem os elementos de animação. -->
+  <defs>
+    <linearGradient id="robot-gradient" gradientUnits="userSpaceOnUse" x1="-82.698" y1="66.675" x2="116.383" y2="-72.967">
+      <stop offset="0%" stop-color="#0036ff" />
+      <stop offset="49.9%" stop-color="#631bff" />
+      <stop offset="100%" stop-color="#c600ff" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(350 350)">
+    <circle r="150" fill="url(#robot-gradient)" />
+    <circle r="125" fill="#000000" />
+    <circle r="125" stroke="#ffffff" stroke-width="5" stroke-dashoffset="-75" stroke-dasharray="3 97" pathLength="100" />
+    <path d="M-38 -31V6 M39 -31V6" stroke="#ffffff" stroke-width="20" stroke-linecap="round" />
+  </g>
+</svg>

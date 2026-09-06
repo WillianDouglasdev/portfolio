@@ -1,5 +1,7 @@
 import opsMindDashboard from "../assets/images/projects/opsmind-dashboard.png";
 import espantaDividaDashboard from "../assets/images/projects/espanta-divida-dashboard.png";
+import vagaCertaAiDashboard from "../assets/images/projects/vagacertaai.png";
+import rotaDevDashboard from "../assets/images/projects/rotadev.png";
 
 // Para publicar outro projeto, adicione os dados e a imagem no array correspondente.
 export const featuredProjects = [
@@ -75,6 +77,60 @@ export const featuredProjects = [
   },
 ];
 
-// Permanecem vazios até existirem informações reais e publicáveis.
 export const upcomingProjects = [];
-export const secondaryProjects = [];
+
+export const secondaryProjects = [
+  {
+    id: "vagacertaai",
+    title: "VagaCertaAI",
+    subtitle: "Lia",
+    badge: "Análise determinística",
+    tagline: "Análise de vagas para entender o que destacar — sem inventar qualificações.",
+    description:
+      "Demo que compara requisitos de uma vaga com informações reais do perfil, destacando correspondências, lacunas e pontos que podem ganhar mais visibilidade no currículo e LinkedIn.",
+    problem:
+      "Candidatos frequentemente utilizam o mesmo currículo para vagas diferentes, mesmo quando cada oportunidade prioriza tecnologias, experiências e responsabilidades distintas.",
+    solution:
+      "A aplicação organiza requisitos da vaga, compara essas informações com o perfil ativo e mostra correspondências, relações parciais e lacunas, além de sugerir pontos que poderiam receber maior destaque.",
+    detailLabel: "Decisão técnica",
+    detail:
+      "A versão atual não utiliza IA generativa. A análise funciona localmente através de regras conhecidas e determinísticas, mantendo cada sugestão vinculada aos fatos existentes no perfil.",
+    primaryTechnologies: ["React", "TypeScript", "Vite", "Bootstrap", "Vitest"],
+    technologies: ["React", "TypeScript", "Vite", "Bootstrap", "Vitest", "CSS personalizado"],
+    links: {
+      demo: "https://lia-vagacerta-ai.vercel.app",
+      github: "https://github.com/WillianDouglasdev/VagaCertaAI",
+    },
+    image: vagaCertaAiDashboard,
+    imageWidth: 1332,
+    imageHeight: 749,
+    imageAlt:
+      "Resultado da comparação no VagaCertaAI com requisitos de uma vaga, compatibilidade estimada e pontos fortes do perfil.",
+  },
+  {
+    id: "rotadev",
+    title: "RotaDev",
+    badge: "CSS puro",
+    tagline: "Uma trilha prática para dar os primeiros passos no Front-end.",
+    description:
+      "Plataforma de estudos que organiza a entrada no desenvolvimento Front-end em uma trilha progressiva, combinando teoria, prática e diferentes formas de interação.",
+    problem:
+      "Quem começa no Front-end encontra uma quantidade enorme de conteúdos, ferramentas e caminhos possíveis, o que pode dificultar saber o que estudar primeiro.",
+    solution:
+      "O RotaDev organiza esse início em uma trilha simples de acompanhar, combinando explicação, prática e aprofundamento para criar uma progressão mais clara de aprendizado.",
+    detailLabel: "Diferencial",
+    detail:
+      "Em vez de funcionar apenas como uma lista de conteúdos, a proposta utiliza diferentes formas de interação ao longo da trilha para tornar o processo mais leve e ajudar o estudante a visualizar sua evolução.",
+    primaryTechnologies: ["React", "JavaScript", "Vite", "CSS"],
+    technologies: ["React", "JavaScript", "Vite", "CSS puro"],
+    links: {
+      demo: "https://rota-dev-alpha.vercel.app",
+      github: "https://github.com/WillianDouglasdev/RotaDev",
+    },
+    image: rotaDevDashboard,
+    imageWidth: 1204,
+    imageHeight: 867,
+    imageAlt:
+      "Trilha do RotaDev com etapas de Front-end, conteúdos, leituras, cursos, jogos e desafios.",
+  },
+];

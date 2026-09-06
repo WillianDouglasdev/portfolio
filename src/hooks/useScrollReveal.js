@@ -3,30 +3,32 @@ import { useEffect } from "react";
 function useScrollReveal() {
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sections = [...document.querySelectorAll(".section-shell:not(.hero)")];
+    const elements = [...document.querySelectorAll(
+      ".section-heading, .about-photo, .about-copy, .degree-item, .professional-training, " +
+      ".focus-card, .technology-group, .featured-project, .secondary-projects-heading, " +
+      ".project-card, .recommendation-item, .recommendation-letter, .contact-layout",
+    )];
 
-    // O conteúdo permanece visível quando animações ou o observer não estão disponíveis.
-    if (reducedMotion.matches || !("IntersectionObserver" in window)) {
-      sections.forEach((section) => section.classList.add("is-visible"));
-      return undefined;
-    }
+    if (!("IntersectionObserver" in window)) return undefined;
 
-    sections.forEach((section) => section.classList.add("reveal-section"));
-
+    // A classe só é adicionada na entrada: o conteúdo nunca depende do observer para aparecer.
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
 
-          entry.target.classList.add("is-visible");
+          if (!reducedMotion.matches) entry.target.classList.add("motion-enter");
           observer.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -10%", threshold: 0.08 },
+      { rootMargin: "0px 0px -4%", threshold: 0 },
     );
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    elements.forEach((element) => observer.observe(element));
+    return () => {
+      observer.disconnect();
+      elements.forEach((element) => element.classList.remove("motion-enter"));
+    };
   }, []);
 }
 

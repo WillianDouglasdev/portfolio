@@ -1,8 +1,10 @@
 # Imagens dos projetos
 
-As capturas reais devem ser salvas nesta pasta e convertidas para WebP antes de serem importadas em `src/data/projects.js`.
+As capturas reais ficam nesta pasta e são importadas em `src/data/projects.js`.
 
-Nomes planejados:
+Arquivos atuais:
 
 - `espanta-divida-dashboard.png`
 - `opsmind-dashboard.png`
+- `vagacertaai.png`
+- `rotadev.png`

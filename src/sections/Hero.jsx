@@ -1,4 +1,5 @@
 import SocialLinks from "../components/SocialLinks";
+import HeroRobot from "../components/HeroRobot";
 import { profile } from "../data/profile";
 
 function Hero() {
@@ -37,23 +38,7 @@ function Hero() {
           </ul>
         </div>
 
-        <div className="hero-signature" aria-hidden="true">
-          <span className="hero-monogram">WD</span>
-          <span className="hero-orbit hero-orbit--one" />
-          <span className="hero-orbit hero-orbit--two" />
-          <span className="hero-focus-badge hero-focus-badge--backend">
-            <i className="bi bi-braces" />
-            Backend
-          </span>
-          <span className="hero-focus-badge hero-focus-badge--data">
-            <i className="bi bi-bar-chart-line" />
-            Dados
-          </span>
-          <span className="hero-focus-badge hero-focus-badge--ai">
-            <i className="bi bi-stars" />
-            IA aplicada
-          </span>
-        </div>
+        <HeroRobot />
       </div>
     </section>
   );

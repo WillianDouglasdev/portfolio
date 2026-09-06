@@ -11,7 +11,7 @@ function FeaturedProject({ project, index, isExpanded, onToggle }) {
           className="project-media"
           href={project.links.demo}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label={`Abrir demonstração do ${project.title}`}
         >
           <img src={project.image} alt={project.imageAlt} loading="lazy" />
@@ -38,7 +38,7 @@ function FeaturedProject({ project, index, isExpanded, onToggle }) {
               className="button button--primary"
               href={project.links.demo}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Ver projeto
               <i className="bi bi-arrow-up-right" aria-hidden="true" />
@@ -47,7 +47,7 @@ function FeaturedProject({ project, index, isExpanded, onToggle }) {
               className="button button--secondary"
               href={project.links.github}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <i className="bi bi-github" aria-hidden="true" />
               GitHub

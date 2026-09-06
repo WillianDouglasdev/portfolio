@@ -6,6 +6,7 @@ import "./styles/variables.css";
 import "./styles/global.css";
 import "./styles/components.css";
 import "./styles/sections.css";
+import "./styles/motion.css";
 import App from "./App";
 
 // Os estilos ficam centralizados aqui para manter a ordem da cascata previsível.

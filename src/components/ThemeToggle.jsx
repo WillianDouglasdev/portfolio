@@ -12,7 +12,7 @@ function ThemeToggle() {
       aria-label={nextThemeLabel}
       title={nextThemeLabel}
     >
-      <i className={`bi ${theme === "dark" ? "bi-sun" : "bi-moon-stars"}`} aria-hidden="true" />
+      <i key={theme} className={`bi ${theme === "dark" ? "bi-sun" : "bi-moon-stars"}`} aria-hidden="true" />
     </button>
   );
 }

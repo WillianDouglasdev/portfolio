@@ -20,7 +20,7 @@ function Projects() {
       <div className="container-xl">
         <SectionTitle
           id="projects-title"
-          eyebrow="Projetos em destaque"
+          eyebrow="Projetos principais"
           title="Problemas transformados em produtos"
           description="Aplicações que combinam desenvolvimento, regras de negócio, dados e decisões técnicas documentadas."
         />
@@ -40,17 +40,34 @@ function Projects() {
         {upcomingProjects.length > 0 && (
           <div className="conditional-projects" aria-label="Projetos em desenvolvimento">
             {upcomingProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard
+                key={project.id}
+                project={project}
+                isExpanded={expandedProject === project.id}
+                onToggle={() => toggleProject(project.id)}
+              />
             ))}
           </div>
         )}
 
         {secondaryProjects.length > 0 && (
-          <div className="secondary-projects">
-            <h3>Outros projetos</h3>
+          <div className="secondary-projects" aria-labelledby="secondary-projects-title">
+            <div className="secondary-projects-heading">
+              <p className="eyebrow">Outras soluções</p>
+              <h3 id="secondary-projects-title">Mais projetos</h3>
+              <p>
+                Experimentos de produto que ampliam o portfólio com regras locais,
+                TypeScript e experiências de aprendizagem.
+              </p>
+            </div>
             <div className="secondary-projects-grid">
               {secondaryProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  isExpanded={expandedProject === project.id}
+                  onToggle={() => toggleProject(project.id)}
+                />
               ))}
             </div>
           </div>
