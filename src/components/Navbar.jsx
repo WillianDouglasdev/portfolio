@@ -16,7 +16,7 @@ const navItems = [
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("inicio");
   const headerRef = useRef(null);
   const progressRef = useRef(null);
   const menuButtonRef = useRef(null);
@@ -111,20 +111,22 @@ function Navbar() {
         </a>
 
         <div className={`nav-panel ${menuOpen ? "is-open" : ""}`} id="main-menu">
-          <ul className="nav-links">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  className={activeSection === item.id ? "is-active" : ""}
-                  href={item.href}
-                  onClick={closeMenu}
-                  aria-current={activeSection === item.id ? "location" : undefined}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="nav-links-wrap">
+            <ul className="nav-links">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <a
+                    className={activeSection === item.id ? "is-active" : ""}
+                    href={item.href}
+                    onClick={closeMenu}
+                    aria-current={activeSection === item.id ? "location" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="nav-actions">
